@@ -7,7 +7,7 @@ function train()
     train_pers, train_feats, train_twis = pers[1:166], feats[1:166], twis[1:166]
     test_pers, test_feats, test_twis = pers[167:184], feats[167:184], twis[167:184]
     nn = setup_model()
-    opt = SGD(0.1)
+    opt = SGD(1.0)
     for epoch = 1:1000
         epoch % 100 == 1 && println("epoch: $epoch")
         train_loss = 0.0
